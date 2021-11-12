@@ -38,6 +38,7 @@ android {
         applicationId "com.example.login_tutorial"
         minSdkVersion 16
         targetSdkVersion 30
+        multiDexEnabled true
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
@@ -56,7 +57,8 @@ flutter {
 }
 
 dependencies {
-    implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
+    implementation "androidx.multidex:multidex:2.0.1"
+    implementation 'com.facebook.android:facebook-android-sdk:latest.release'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation platform('com.google.firebase:firebase-bom:28.4.0')
 }
